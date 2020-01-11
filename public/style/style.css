@@ -1,0 +1,19 @@
+#display {
+  overflow: hidden;
+  position: static;
+  height: 600px;
+  width: 600px;
+  background-color: #000000;
+  border:1px solid #000000;
+  display:inline-block;
+}
+
+#information {
+  overflow: hidden;
+  position: static;
+  height: 600px;
+  width: 300px;
+  background-color: #000000;
+  border:1px solid #000000;
+  display:inline-block;
+}
