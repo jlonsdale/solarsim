@@ -4,7 +4,7 @@ $( document ).ready(function() {
     let ctx = canvas.getContext("2d");
     let myUniverse = new Universe(canvas);
     const star = myUniverse.star
-    myUniverse.addPlanet(100,10)
+    myUniverse.addPlanet(100,10,50)
     setInterval(draw, 10);
 
     //debugging method
@@ -17,10 +17,10 @@ $( document ).ready(function() {
 
   $("#addPlanet").submit(function(event) {
     event.preventDefault();
-    var distance = (($(this).find("[name=distance]").val())/100)*200;
+    var distance = (($(this).find("[name=distance]").val())/100)*300;
     var radius = (($(this).find("[name=radius]").val())/100)*star.radius;
 
-    myUniverse.addPlanet(distance,radius)
+    myUniverse.addPlanet(distance,radius,50)
 
   })
 

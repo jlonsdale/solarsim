@@ -1,19 +1,26 @@
 class Planet {
 
-  constructor(distance,radius) {
+  constructor(distance,radius,rb) {
+
     this.colour = this.randomColour();
-    this.distance = distance;
+    this.ra = distance;
+    this.rb = rb;
     this.radius = radius;
     this.period = 1;
 
-    this.e = 0.5;
-    this.r = distance;
-    this.a = 150;
 
-    this.xPos = this.r
+    this.ra = distance;
+    this.rb = rb;
+    this.a = (this.ra+this.rb)/2
+    this.b = Math.sqrt(this.ra*this.rb)
+
+    this.e = (this.ra-this.rb)/(this.ra+this.rb)
+
+
+    this.xPos = distance;
     this.yPos = 0;
-    this.vel = 0;
-    this.theta = 0;
+    this.r = distance;
+    this.theta = 3.141;
 
     this.dt = 0.1
   }
@@ -32,16 +39,12 @@ class Planet {
     return this.r
   }
 
-  calcV() {
-    return 1/Math.sqrt(this.calcR())
-  }
-
   updateTheta() {
     if(this.theta>2*Math.PI) {
       this.theta = 0;
     }
     else {
-      this.theta+=this.calcV()*this.dt
+      this.theta+=0.01
     }
   }
 
@@ -49,7 +52,6 @@ class Planet {
   position() {
 
     var r = this.calcR()
-    console.log(this.calcV())
 
     this.xPos = (this.r+this.radius)*Math.cos(this.theta)
     this.yPos = (this.r+this.radius)*Math.sin(this.theta)

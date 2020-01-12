@@ -8,8 +8,8 @@ class Universe {
     this.objects = []
   };
 
-  addPlanet(distance,radius) {
-    this.objects.push(new Planet(distance,radius))
+  addPlanet(distance,radius,rb) {
+    this.objects.push(new Planet(distance,radius,rb))
   }
 
   //Canvas coords to real coords
