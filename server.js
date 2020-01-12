@@ -5,7 +5,11 @@ const { JSDOM } = jsdom;
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(8000);
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + 'public/index.html')
