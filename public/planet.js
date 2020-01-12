@@ -6,9 +6,16 @@ class Planet {
     this.radius = radius;
     this.period = 1;
 
-    this.xPos = distance;
+    this.e = 0.5;
+    this.r = distance;
+    this.a = 150;
+
+    this.xPos = this.r
     this.yPos = 0;
+    this.vel = 0;
     this.theta = 0;
+
+    this.dt = 0.1
   }
 
   randomColour() {
@@ -20,18 +27,32 @@ class Planet {
     return colour;
   }
 
+  calcR() {
+    this.r = this.a*(1-this.e*this.e)/(1+this.e*Math.cos(this.theta))
+    return this.r
+  }
+
+  calcV() {
+    return 1/Math.sqrt(this.calcR())
+  }
+
   updateTheta() {
     if(this.theta>2*Math.PI) {
       this.theta = 0;
     }
     else {
-      this.theta+=0.01
+      this.theta+=this.calcV()*this.dt
     }
   }
 
+
   position() {
-    this.xPos = (this.distance+this.radius)*Math.cos(this.theta)
-    this.yPos = (this.distance+this.radius)*Math.sin(this.theta)
+
+    var r = this.calcR()
+    console.log(this.calcV())
+
+    this.xPos = (this.r+this.radius)*Math.cos(this.theta)
+    this.yPos = (this.r+this.radius)*Math.sin(this.theta)
     this.updateTheta()
   }
 
