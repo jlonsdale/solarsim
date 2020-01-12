@@ -2,7 +2,7 @@
   "name": "solarsim",
   "version": "1.0.0",
   "description": "https://www.youtube.com/watch?v=ESx_hy1n7HA",
-  "main": "interface.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
