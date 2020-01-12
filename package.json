@@ -1,16 +1,17 @@
 {
   "name": "solarsim",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://www.youtube.com/watch?v=ESx_hy1n7HA",
   "main": "interface.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jlonsdale/solarsim.git"
   },
-  "author": "",
+  "author": "Jess Lonsdale",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jlonsdale/solarsim/issues"
@@ -19,5 +20,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "jsdom": "^15.2.1"
-  }
+  },
+  "engines": {
+    "node": "10.16.3"
+  },
+  "devDependencies": {}
 }
