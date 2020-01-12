@@ -9,9 +9,9 @@
 #information {
   overflow: hidden;
   position: static;
-  height: 600px;
+  height: 700px;
   width: 300px;
-  background-color: #000000;
+  background-color: #ffffff;
   border:1px solid #000000;
   display:inline-block;
 }

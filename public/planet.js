@@ -30,7 +30,6 @@ class Planet {
   }
 
   position() {
-    console.log(this.theta)
     this.xPos = (this.distance+this.radius)*Math.cos(this.theta)
     this.yPos = (this.distance+this.radius)*Math.sin(this.theta)
     this.updateTheta()

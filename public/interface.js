@@ -3,6 +3,7 @@ $( document ).ready(function() {
     let canvas = document.getElementById('display');
     let ctx = canvas.getContext("2d");
     let myUniverse = new Universe(canvas);
+    const star = myUniverse.star
     myUniverse.addPlanet(100,10)
     setInterval(draw, 10);
 
@@ -14,10 +15,18 @@ $( document ).ready(function() {
       console.log(myUniverse.getX(x1),myUniverse.getY(y1))
     });
 
+  $("#addPlanet").submit(function(event) {
+    event.preventDefault();
+    var distance = (($(this).find("[name=distance]").val())/100)*200;
+    var radius = (($(this).find("[name=radius]").val())/100)*star.radius;
+
+    myUniverse.addPlanet(distance,radius)
+
+  })
+
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    let star = myUniverse.star;
     drawBall(star.xPos,star.yPos,star.radius,star.colour);
 
     myUniverse.objects.forEach((item,index) => {
