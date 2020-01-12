@@ -1,5 +1,7 @@
 const express = require('express');
+const jsdom = require("jsdom");
 const app = express();
+const { JSDOM } = jsdom;
 
 app.use(express.static(__dirname + '/public'));
 
