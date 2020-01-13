@@ -1,4 +1,4 @@
-# ⭐ 🌎 🌍 🌏solarsim 🌎 🌍 🌏 ⭐
+# ⭐ 🌎 🌍 🌏 solarsim  🌎 🌍 🌏 ⭐
 ## A way to visualise eliptical orbital motion!
 
 Deployment Link: https://lit-shelf-58015.herokuapp.com
