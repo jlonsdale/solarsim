@@ -9,7 +9,7 @@ The Semi-Major and Semi-Minor Axis & Ecentricity by just inputting the max and m
 
 Here is a screenshot of the app in action!
 
-![ScreenShot](https://github.com/jlonsdale/least_knight_moves/blob/master/screenshot.png)
+![ScreenShot](https://github.com/jlonsdale/solarsim/blob/master/screenshot.png)
 
 # Tech Stack
 
