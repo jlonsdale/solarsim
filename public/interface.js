@@ -17,16 +17,14 @@ $( document ).ready(function() {
 
   $("#addPlanet").submit(function(event) {
     event.preventDefault();
-    var distance = (($(this).find("[name=distance]").val())/100)*300;
+    var ra = (($(this).find("[name=distance]").val())/100)*300;
     var radius = (($(this).find("[name=radius]").val())/100)*star.radius;
-    var rb = (($(this).find("[name=rb]").val())/100)*distance
-console.log(distance,rb)
-
-    myUniverse.addPlanet(distance,radius,rb)
-
+    var rb = (($(this).find("[name=rb]").val())/100)*ra
+    myUniverse.addPlanet(ra,radius,rb)
   })
 
   function draw() {
+    updatePlanet()
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     drawBall(star.xPos,star.yPos,star.radius,star.colour);
@@ -47,6 +45,13 @@ console.log(distance,rb)
     ctx.fill();
     ctx.closePath();
   };
+
+  function updatePlanet() {
+    myUniverse.objects.forEach((item, index) => {
+      $('#'+index).css('background-color', item.colour);
+      $('#'+index).text('Semi-Major Axis: '+item.a.toFixed(1)+', '+'Semi-Minor Axis '+item.b.toFixed(1)+', '+'Excentricity '+item.e.toFixed(1));
+    })
+  }
 
 
 

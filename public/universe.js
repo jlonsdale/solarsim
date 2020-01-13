@@ -9,7 +9,13 @@ class Universe {
   };
 
   addPlanet(distance,radius,rb) {
-    this.objects.push(new Planet(distance,radius,rb))
+    console.log(this.objects.length)
+    if (this.objects.length>7) {
+      console.log(this.objects.length)
+      this.objects.shift()
+      this.objects.push(new Planet(distance,radius,rb))
+    }
+    else {this.objects.push(new Planet(distance,radius,rb))}
   }
 
   //Canvas coords to real coords

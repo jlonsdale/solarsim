@@ -9,9 +9,18 @@
 #information {
   overflow: hidden;
   position: static;
-  height: 700px;
+  height: 900px;
   width: 300px;
   background-color: #ffffff;
   border:1px solid #000000;
   display:inline-block;
+}
+
+.planet {
+  height: 60px;
+  width: 290px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  border:1px solid #000000;
 }

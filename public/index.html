@@ -17,18 +17,16 @@
 <body>
   <center>
     <div id='app'>
-      <canvas id='display' width="800" height="700" ></canvas>
+      <canvas id='display' width="800" height="900" ></canvas>
       <div id='information'>
       <form id='addPlanet'>
         <div class="form-group">
 
-          <label for="formControlRange">Ra</label>
+          <label for="formControlRange">Ra (Max Radius from Star to Planet)/ Relative Units</label>
           <input type="range" class="form-control-range" min="20" max="100" name="distance">
 
-
-          <label for="formControlRange">Rb (Relative to Ra)</label>
+          <label for="formControlRange">Rb (Minimum Radius from Star to Planet)/ Relative Units</label>
           <input type="range" class="form-control-range" name="rb">
-
 
           <label for="formControlRange">Planet Radius (Relative to Star)</label>
           <input type="range" class="form-control-range" name="radius">
@@ -37,7 +35,18 @@
         <div class="col-sm-10">
             <button type="submit" class="btn btn-primary">Add Planet</button>
         </div>
+
       </form>
+      Information in Relative Units.
+      <div class='planet' id='0' ></div>
+      <div class='planet' id='1' ></div>
+      <div class='planet' id='2' ></div>
+      <div class='planet' id='3' ></div>
+      <div class='planet' id='4' ></div>
+      <div class='planet' id='5' ></div>
+      <div class='planet' id='6' ></div>
+      <div class='planet' id='7' ></div>
+
     </div>
    </div>
   </center>

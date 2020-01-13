@@ -8,11 +8,12 @@ class Planet {
     this.rb = rb+this.star.radius;
     this.radius = radius;
     this.period = 1;
-
-    this.a = (this.ra+this.rb)/2
-    this.b = Math.sqrt(this.ra*this.rb)
-
     this.e = (this.ra-this.rb)/(this.ra+this.rb)
+    this.a = (this.ra+this.rb)/2
+    this.b = this.a*Math.sqrt(1-this.e*this.e)
+
+
+
 
 
     this.xPos = distance;
