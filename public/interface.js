@@ -19,8 +19,10 @@ $( document ).ready(function() {
     event.preventDefault();
     var distance = (($(this).find("[name=distance]").val())/100)*300;
     var radius = (($(this).find("[name=radius]").val())/100)*star.radius;
+    var rb = (($(this).find("[name=rb]").val())/100)*distance
+console.log(distance,rb)
 
-    myUniverse.addPlanet(distance,radius,50)
+    myUniverse.addPlanet(distance,radius,rb)
 
   })
 

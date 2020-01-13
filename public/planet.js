@@ -1,16 +1,14 @@
 class Planet {
 
   constructor(distance,radius,rb) {
+    this.star = new Star()
 
     this.colour = this.randomColour();
-    this.ra = distance;
-    this.rb = rb;
+    this.ra = distance+this.star.radius;
+    this.rb = rb+this.star.radius;
     this.radius = radius;
     this.period = 1;
 
-
-    this.ra = distance;
-    this.rb = rb;
     this.a = (this.ra+this.rb)/2
     this.b = Math.sqrt(this.ra*this.rb)
 
@@ -53,7 +51,7 @@ class Planet {
 
     var r = this.calcR()
 
-    this.xPos = (this.r+this.radius)*Math.cos(this.theta)
+    this.xPos = (this.r+this.radius)*Math.cos(this.theta)+2*this.a*this.e
     this.yPos = (this.r+this.radius)*Math.sin(this.theta)
     this.updateTheta()
   }

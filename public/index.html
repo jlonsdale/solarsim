@@ -22,8 +22,13 @@
       <form id='addPlanet'>
         <div class="form-group">
 
-          <label for="formControlRange">Distance From Star Center</label>
-          <input type="range" class="form-control-range" name="distance">
+          <label for="formControlRange">Ra</label>
+          <input type="range" class="form-control-range" min="20" max="100" name="distance">
+
+
+          <label for="formControlRange">Rb (Relative to Ra)</label>
+          <input type="range" class="form-control-range" name="rb">
+
 
           <label for="formControlRange">Planet Radius (Relative to Star)</label>
           <input type="range" class="form-control-range" name="radius">
