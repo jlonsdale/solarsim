@@ -1,8 +1,6 @@
 # ⭐ 🌎 🌍 🌏 solarsim  🌎 🌍 🌏 ⭐
 ## A way to visualise eliptical orbital motion!
 
-Deployment Link: https://solarorbitsym.herokuapp.com/
-
 # Description and Motivation.
 
 I wanted to make a way for students/anyone intrested to be able to visualise elliptical orbit parameters.
